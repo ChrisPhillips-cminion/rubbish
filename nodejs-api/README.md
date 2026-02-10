@@ -36,29 +36,40 @@ The API will be available at `http://localhost:8080`
 oc apply -f openshift-config.yaml
 ```
 
-2. **Build and deploy the application:**
+2. **The build will start automatically from GitHub:**
+The BuildConfig is configured to pull from:
+- Repository: https://github.com/ChrisPhillips-cminion/rubbish
+- Branch: main
+- Context Directory: nodejs-api
+
+3. **Monitor the build:**
 ```bash
-# Create a binary build from the current directory
-oc start-build nodejs-api --from-dir=. --follow
+oc logs -f bc/nodejs-api
 ```
 
-3. **Get the route URL:**
+4. **Get the route URL:**
 ```bash
 oc get route nodejs-api
 ```
 
-### Alternative: Direct Deployment
+### Manual Build Trigger
 
-You can also deploy directly without the build:
+To manually trigger a build:
 
 ```bash
-# Apply all configurations
-oc apply -f openshift-config.yaml
-
-# Start the build from the current directory
-cd nodejs-api
-oc start-build nodejs-api --from-dir=. --follow
+oc start-build nodejs-api
 ```
+
+### GitHub Webhook
+
+The BuildConfig includes a GitHub webhook trigger. To set it up:
+
+1. Get the webhook URL:
+```bash
+oc describe bc/nodejs-api | grep -A 1 "Webhook GitHub"
+```
+
+2. Add the webhook URL to your GitHub repository settings under "Webhooks"
 
 ## Testing the API
 
