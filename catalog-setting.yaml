@@ -1,0 +1,55 @@
+type: 'catalog_setting'
+api_version: '2.0.0'
+name: 'catalog-setting'
+user_registry_default_url: 'https://api.apps.698905d36b5150aa779bbc62.ap1.techzone.ibm.com/api/catalogs/00ebd798-e6fa-48e8-b04b-6a801908a5ae/09c2d8ba-d769-48ff-8921-c76bdb979b4b/configured-catalog-user-registries/af6fdf74-f2dd-4310-985d-ecae9185b63b'
+production_mode: false
+portal:
+  type: 'none'
+product_lifecycle_approvals: []
+task_self_approval: false
+allowed_product_visibility:
+  view:
+    type: 'public'
+    enabled: false
+  subscribe:
+    type: 'authenticated'
+    enabled: false
+application_lifecycle:
+  enabled: false
+consumer_self_service_onboarding: true
+consumer_self_service_onboarding_approval: false
+consumer_org_invitations_enabled: true
+consumer_org_invitation_roles:
+  - 'administrator'
+  - 'developer'
+  - 'viewer'
+invitation_ttl: 172800
+vanity_api_endpoint:
+  enabled: false
+  vanity_api_base_endpoints: []
+spaces_enabled: false
+custom_notification_templates_enabled: false
+email_sender:
+  custom: false
+hash_client_secret: false
+subscription_task_approval_retention: 60
+default_catalog: false
+product_publish_validations:
+  - 'emptyPathCheck_catalogScope'
+  - 'customPolicySchema_validation'
+  - 'enhancedOAIValidation_catalogScope'
+override_invitation_ttl_for_all_consumer_orgs: false
+gateway_supported_protocols:
+  - 'https'
+  - 'wss'
+tls_client_profile_url: 'https://api.apps.698905d36b5150aa779bbc62.ap1.techzone.ibm.com/api/orgs/00ebd798-e6fa-48e8-b04b-6a801908a5ae/tls-client-profiles/5d810cdd-869e-489d-93a2-253916f40fbf'
+consumer_self_service_onboarding_ttl: 259200
+consumer_catalog_enabled: false
+protected_properties: []
+corg_member_invitation_regenerate_delay: 0
+max_corg_members: 2147483647
+created_at: '2026-02-09T06:09:25.000Z'
+updated_at: '2026-02-09T06:09:25.000Z'
+org_url: 'https://api.apps.698905d36b5150aa779bbc62.ap1.techzone.ibm.com/api/orgs/00ebd798-e6fa-48e8-b04b-6a801908a5ae'
+catalog_url: 'https://api.apps.698905d36b5150aa779bbc62.ap1.techzone.ibm.com/api/catalogs/00ebd798-e6fa-48e8-b04b-6a801908a5ae/09c2d8ba-d769-48ff-8921-c76bdb979b4b'
+url: 'https://api.apps.698905d36b5150aa779bbc62.ap1.techzone.ibm.com/api/catalogs/00ebd798-e6fa-48e8-b04b-6a801908a5ae/09c2d8ba-d769-48ff-8921-c76bdb979b4b/settings'

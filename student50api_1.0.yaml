@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: Student50API
+  version: "1.0"
+  x-ibm-name: student50api
+servers:
+- url: https://httpbin.org/ip
+paths:
+  /student50:
+    summary: ""
+    description: ""
+    get:
+      responses:
+        "200":
+          description: 200 ok
+x-ibm-configuration:
+  gateway: datapower-nano-gateway
+  phase: realized
+  enforced: true
+  testable: true
+  assembly:
+    execute:
+    - invoke:
+        endpoint:
+          http:
+            target:
+              timeout: 30
+              url: https://httpbin.org/ip
+              tlsClientProfile: tls-client-profile-catalog-default:1.0.0
+            verb: GET
+        version: 10.0.0
+    finally: []
+    catch: []

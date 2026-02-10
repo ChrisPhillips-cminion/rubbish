@@ -1,0 +1,7 @@
+type: configured_tls_client_profile
+api_version: 2.0.0
+name: configured-tls-client-profile-catalog-default
+title: Configured TLS Client Profile for Sandbox
+tls_client_profile_url: https://api.apps.698905d36b5150aa779bbc62.ap1.techzone.ibm.com/api/orgs/00ebd798-e6fa-48e8-b04b-6a801908a5ae/tls-client-profiles/5d810cdd-869e-489d-93a2-253916f40fbf
+
+# Made with Bob
